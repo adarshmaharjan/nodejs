@@ -1,8 +1,5 @@
-const _ = require("lodash");
+const EventEmitter = require("events");
 
-const items = [1, [2, [3, [4]]]];
+const costomeEmmiter = new EventEmitter();
 
-const newItems = _.flattenDeep(items);
-
-console.log(newItems);
-console.log("Hello people");
+costomeEmmiter.on();
