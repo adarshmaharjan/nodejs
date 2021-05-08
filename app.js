@@ -1,5 +1,8 @@
-const EventEmitter = require("events");
+const http = require("http");
 
-const costomeEmmiter = new EventEmitter();
+const server = http.createServer();
 
-costomeEmmiter.on();
+server.on("request", (req, res) => {
+  res.end("Welcome");
+});
+server.listen(5000);
